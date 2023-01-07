@@ -1,19 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://bush.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player2/player.tscn" type="PackedScene" id=2]
 
-[sub_resource type="Animation" id=1]
-resource_name = "RUN RIGHT"
-length = 0.6
-loop = true
-
 [node name="world" type="YSort"]
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="player"]
-"anims/RUN RIGHT" = SubResource( 1 )
 
 [node name="bush" parent="." instance=ExtResource( 1 )]
 position = Vector2( 176, 32 )
